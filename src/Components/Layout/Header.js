@@ -21,15 +21,15 @@ const Header = (props) => {
                 <div className={classnames('collapse navbar-collapse justify-content-end', { 'd-block': navShow })}>
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to="/Contacts" className="nav-link">
+                            <Link to="/ContactManager" className="nav-link">
                                 <i className="fas fa-home" /> Home</Link>
                         </ li>
                         <li className="nav-item">
-                            <Link to="/Contacts/Add" className="nav-link">
+                            <Link to="/ContactManager/Contacts/Add" className="nav-link">
                                 <i className="fas fa-plus-square" /> Add</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Contacts/About" className="nav-link">
+                            <Link to="/ContactManager/About" className="nav-link">
                                 <i className="fas fa-info-circle" /> About</Link>
                         </li>
                     </ul>
