@@ -19,9 +19,9 @@ function App() {
           <Header branding="Contact Manager" />
           <div className="container">
             <Switch>
-              <Route exact path="/Contacts" component={Contacts} />
-              <Route exact path="/Contacts/Add" component={AddContact} />
-              <Route exact path="/Contacts/About" component={About} />
+              <Route exact path="/ContactManager" component={Contacts} />
+              <Route exact path="/ContactManager/Contacts/Add" component={AddContact} />
+              <Route exact path="/ContactManager/About" component={About} />
               <Route exact component={NotFound} />
             </Switch>
           </div>
