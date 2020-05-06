@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Consumer } from '../../Provider/Context';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Consumer } from '../../Provider/Context'
+import axios from 'axios'
 
 class Contact extends Component {
     state = {
@@ -12,7 +13,9 @@ class Contact extends Component {
     }
 
     onDeleteClick = (id,dispatch) => {
-        dispatch({type:'DELETE_CONTACT', payload: id})
+        axios
+            .delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+            .then(res=>dispatch({type:'DELETE_CONTACT', payload: id}))
     }
 
     render() {
@@ -25,9 +28,9 @@ class Contact extends Component {
                     return (
                         <div className="card card-body mb-3">
                             <h4>
-                                {name}
-                                <i onClick={this.onShowClick} className="fas fa-sort-down" style={{ cursor: 'pointer' }} />
-                                <i onClick={this.onDeleteClick.bind(this, id, dispatch)} className="fas fa-times" style={{ cursor: 'pointer', float: 'right', color: 'red' }}></i>
+                                {name}&nbsp;
+                                <i onClick={this.onShowClick} className={showContactInfo ? "fas fa-caret-square-up":"far fa-caret-square-down"} style={{ cursor: 'pointer' }} />
+                                <i onClick={this.onDeleteClick.bind(this, id, dispatch)} className="fas fa-times" style={{ cursor: 'pointer', float: 'right', color: 'red' }} />
                             </h4>
                             {showContactInfo ?
                                 (<ul className="list-group">
