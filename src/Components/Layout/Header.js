@@ -11,7 +11,7 @@ const Header = (props) => {
         <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-2">
             <div className="container">
                 <img width="50" className="text-danger" src={logo} alt="React Logo" />
-                <a href="/" className="navbar-brand">
+                <a href="/ContactManager" className="navbar-brand">
                     {branding}
                 </a>
                 <button className="navbar-toggler" id="navbar-toggler" type="button" onClick={() => { console.log(navShow);navShow = !navShow; console.log(navShow)}}>
