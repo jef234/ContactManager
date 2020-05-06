@@ -21,7 +21,7 @@ const Header = (props) => {
                 <div className={classnames('collapse navbar-collapse justify-content-end', { 'd-block': navShow })}>
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">
+                            <Link to="/Contacts" className="nav-link">
                                 <i className="fas fa-home" /> Home</Link>
                         </ li>
                         <li className="nav-item">
@@ -29,7 +29,7 @@ const Header = (props) => {
                                 <i className="fas fa-plus-square" /> Add</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/About" className="nav-link">
+                            <Link to="/Contacts/About" className="nav-link">
                                 <i className="fas fa-info-circle" /> About</Link>
                         </li>
                     </ul>
