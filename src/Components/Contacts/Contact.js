@@ -12,10 +12,14 @@ class Contact extends Component {
         this.setState({ showContactInfo: !this.state.showContactInfo })
     }
 
-    onDeleteClick = (id,dispatch) => {
-        axios
-            .delete(`https://jsonplaceholder.typicode.com/users/${id}`)
-            .then(res=>dispatch({type:'DELETE_CONTACT', payload: id}))
+    onDeleteClick = async (id, dispatch) => {
+        try {
+            await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+            dispatch({ type: 'DELETE_CONTACT', payload: id })
+        }
+        catch (e) {
+            dispatch({ type: 'DELETE_CONTACT', payload: id })
+        }
     }
 
     render() {
@@ -24,12 +28,12 @@ class Contact extends Component {
         return (
             <Consumer>
                 {value => {
-                    const {dispatch} = value
+                    const { dispatch } = value
                     return (
                         <div className="card card-body mb-3">
                             <h4>
                                 {name}&nbsp;
-                                <i onClick={this.onShowClick} className={showContactInfo ? "fas fa-caret-square-up":"far fa-caret-square-down"} style={{ cursor: 'pointer' }} />
+                                <i onClick={this.onShowClick} className={showContactInfo ? "fas fa-caret-square-up" : "far fa-caret-square-down"} style={{ cursor: 'pointer' }} />
                                 <i onClick={this.onDeleteClick.bind(this, id, dispatch)} className="fas fa-times" style={{ cursor: 'pointer', float: 'right', color: 'red' }} />
                             </h4>
                             {showContactInfo ?
