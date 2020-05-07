@@ -19,15 +19,15 @@ const Header = (props) => {
                 <div id="navbarSupportedContent" className="collapse navbar-collapse justify-content-end">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">
+                            <Link to="/" className="nav-link" data-toggle="collapse" data-target="#navbarSupportedContent">
                                 <i className="fas fa-home" /> Home</Link>
                         </ li>
                         <li className="nav-item">
-                            <Link to="/Contacts/Add" className="nav-link">
+                            <Link to="/Contacts/Add" className="nav-link" data-toggle="collapse" data-target="#navbarSupportedContent">
                                 <i className="fas fa-plus-square" /> Add</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/About" className="nav-link">
+                            <Link to="/About" className="nav-link" data-toggle="collapse" data-target="#navbarSupportedContent">
                                 <i className="fas fa-info-circle" /> About</Link>
                         </li>
                     </ul>
