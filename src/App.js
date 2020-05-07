@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Contacts from './Components/Contacts/Contacts';
 import AddContact from './Components/Contacts/AddContact';
+import EditContact from './Components/Contacts/EditContact';
 import Header from './Components/Layout/Header';
 import About from './Components/pages/About'
 import NotFound from './Components/pages/NotFound'
@@ -21,6 +22,7 @@ function App() {
             <Switch>
               <Route exact path="/ContactManager" component={Contacts} />
               <Route exact path="/ContactManager/Contacts/Add" component={AddContact} />
+              <Route exact path="/ContactManager/Contacts/Edit/:id" component={EditContact} />
               <Route exact path="/ContactManager/About" component={About} />
               <Route exact component={NotFound} />
             </Switch>
