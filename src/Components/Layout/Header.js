@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import logo from '../../logo.svg';
-import classnames from 'classnames'
 
 const Header = (props) => {
-    let { branding, navShow } = props;
+    let { branding } = props;
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-2">
@@ -14,11 +13,10 @@ const Header = (props) => {
                 <Link to="/" className="navbar-brand">
                     {branding}
                 </Link>
-                <button className="navbar-toggler" id="navbar-toggler" type="button" onClick={() => { console.log(navShow);navShow = !navShow; console.log(navShow)}}>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                {/* <div className='collapse navbar-collapse justify-content-end',}> */}
-                <div className={classnames('collapse navbar-collapse justify-content-end', { 'd-block': navShow })}>
+                <div id="navbarSupportedContent" className="collapse navbar-collapse justify-content-end">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link to="/" className="nav-link">
@@ -40,8 +38,7 @@ const Header = (props) => {
 }
 
 Header.defaultProps = {
-    branding: "My App",
-    navShow: true
+    branding: "My App"
 }
 
 Header.prototype = {
