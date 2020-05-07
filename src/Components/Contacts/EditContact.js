@@ -50,7 +50,7 @@ class EditContact extends Component {
             errors: {}
         })
 
-        this.props.history.push('/ContactManager/')
+        this.props.history.push('/')
     }
 
     onChange = e => this.setState({ [e.target.name]: e.target.value })

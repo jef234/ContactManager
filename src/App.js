@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Contacts from './Components/Contacts/Contacts';
 import AddContact from './Components/Contacts/AddContact';
@@ -20,10 +20,10 @@ function App() {
           <Header branding="Contact Manager" />
           <div className="container">
             <Switch>
-              <Route exact path="/ContactManager" component={Contacts} />
-              <Route exact path="/ContactManager/Contacts/Add" component={AddContact} />
-              <Route exact path="/ContactManager/Contacts/Edit/:id" component={EditContact} />
-              <Route exact path="/ContactManager/About" component={About} />
+              <Route exact path="/" component={Contacts} />
+              <Route exact path="/Contacts/Add" component={AddContact} />
+              <Route exact path="/Contacts/Edit/:id" component={EditContact} />
+              <Route exact path="/About" component={About} />
               <Route exact component={NotFound} />
             </Switch>
           </div>
