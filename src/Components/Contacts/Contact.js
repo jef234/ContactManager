@@ -36,7 +36,7 @@ class Contact extends Component {
                                 {name}&nbsp;
                                 <i onClick={this.onShowClick} className={showContactInfo ? "fas fa-caret-square-up" : "far fa-caret-square-down"} style={{ cursor: 'pointer' }} />
                                 <i onClick={this.onDeleteClick.bind(this, id, dispatch)} className="fas fa-times" style={{ cursor: 'pointer', float: 'right', color: 'red' }} />
-                                <Link to={`/ContactManager/Contacts/Edit/${id}`}><i className="fas fa-pencil-alt mr-3" style={{ cursor: 'pointer', float: 'right', color: 'black', fontSize: '1.17rem' }} /></Link>
+                                <Link to={`/Contacts/Edit/${id}`}><i className="fas fa-pencil-alt mr-3" style={{ cursor: 'pointer', float: 'right', color: 'black', fontSize: '1.17rem' }} /></Link>
                             </h4>
                             {showContactInfo ?
                                 (<ul className="list-group">
