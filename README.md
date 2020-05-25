@@ -9,6 +9,9 @@ Technologies: React, Context API, Bootstrap, HTML and CSS.
 ### Install
 ```npm install```
 
+### Run
+```npm run start```
+
 ### Build
 ```npm run build```
 
